@@ -1,0 +1,48 @@
+<% content_for :content_header  do %>
+  <section class="content-header">
+    <h1>Listing <small>personas</small></h1>
+
+    <ol class="breadcrumb">
+      <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">personas</li>
+    </ol>
+  </section>
+<% end %>
+
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box box-primary">
+        <div class="box-header">
+          <div class="box-tools pull-right">
+            <%= link_to new_persona_path(@persona), :class => 'btn btn-success' do %>
+              <span class="glyphicon glyphicon-plus"></span>
+              New Persona
+            <% end %>
+          </div>
+        </div>
+        <div class="box-body table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+              <th>Nombre</th>
+                            <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= content_tag_for(:tr, @personas) do |persona| %>
+              <td><%= persona.nombre %></td>
+                            <td><%= link_to 'Show', persona %></td>
+                <td><%= link_to 'Edit', edit_persona_path(persona) %></td>
+                <td><%= link_to 'Destroy', persona, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= will_paginate @personas, renderer: BootstrapPagination::Rails %>
+</section>

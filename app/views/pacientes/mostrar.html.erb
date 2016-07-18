@@ -1,0 +1,27 @@
+<% content_for :content_header  do %>
+  <section class="content-header">
+    <h1>Paciente</h1>
+  </section>
+<% end %>
+
+<section class="content invoice">
+  <p>
+    <strong>Nombre: </strong>
+    <%= @paciente.nombre %>
+  </p>
+  <p>
+    <strong>Edad: </strong>
+    <%= @paciente.edad %>
+  </p>
+  <p>
+    <strong>RUT: </strong>
+    <%= @paciente.rut %>
+  </p>
+  <p>
+    <strong> Fecha de Nacimiento</strong>
+    <%= @paciente.fecha_nacimiento %>
+  </p>
+
+
+  <%= link_to 'Atras', pacientes_url,:class =>"btn btn-info" %>
+</section>

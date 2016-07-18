@@ -1,0 +1,20 @@
+<section class="sidebar">
+  <!-- Sidebar user panel -->
+  <!-- search form -->
+  <!-- /.search form -->
+  <!-- sidebar menu: : style can be found in sidebar.less -->
+  <ul class="sidebar-menu">
+    <%= nav_link personas_path do %>
+      <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+    <% end %>
+
+      <%= nav_link  personas_url do %>
+        <i class="fa fa-angle-double-right"></i>
+        Personas
+      <% end %>
+      <%= nav_link pacientes_url do %>
+        <i class="fa fa-angle-double-right"></i>
+        Pacientes
+      <% end %>
+  </ul>
+</section>
