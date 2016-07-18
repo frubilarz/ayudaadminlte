@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :usuarios
+  devise_for :users
 
   get 'pacientes/', to: 'pacientes#index', as: 'pacientes'
   get 'pacientes/nuevo', as: 'nuevo_paciente'
