@@ -3,10 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  layout :layout
+  layout :manejo_vista_admin
 
   private
-  def layout
+  def manejo_vista_admin
     if devise_controller?
       "login"
     else
